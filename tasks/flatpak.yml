@@ -4,4 +4,4 @@
 
 - name: add-flatpaks
   command:
-    cmd: flatpak install flathub org.chromium.Chromium 
+    cmd: flatpak install flathub org.chromium.Chromium --assumeyes
