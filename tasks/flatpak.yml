@@ -4,11 +4,9 @@
 - name: add-zoom-flatpak
   command:
     cmd: flatpak install flathub us.zoom.Zoom --assumeyes
-    args:
-      creates: /var/lib/flatpak/app/us.zoom.Zoom
+    creates: /var/lib/flatpak/app/us.zoom.Zoom
 - name: add-podcasts-flatpak
   command:
     cmd: flatpak install flathub org.gnome.Podcasts --assumeyes
-    args:
-      creates: /var/lib/flatpak/app/org.gnome.Podcasts
+    creates: /var/lib/flatpak/app/org.gnome.Podcasts
 
