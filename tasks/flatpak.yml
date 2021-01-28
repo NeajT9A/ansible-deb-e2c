@@ -1,7 +1,14 @@
 - name: add-repos
   command:
     cmd: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-- name: add-flatpaks
+- name: add-zoom-flatpak
   command:
-    cmd: flatpak install flathub org.chromium.Chromium --assumeyes
+    cmd: flatpak install flathub us.zoom.Zoom --assumeyes
+    args:
+      creates: /var/lib/flatpak/app/us.zoom.Zoom
+- name: add-podcasts-flatpak
+  command:
+    cmd: flatpak install flathub org.gnome.Podcasts --assumeyes
+    args:
+      creates: /var/lib/flatpak/app/org.gnome.Podcasts
+
