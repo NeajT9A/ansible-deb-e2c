@@ -5,7 +5,3 @@
       - flatpak
       - firmware-realtek
     state: present
-- name: remove bloat
-  apt:
-    name: firefox-esr
-    state: absent
