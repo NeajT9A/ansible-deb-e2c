@@ -1,6 +1,13 @@
 - name: Install packages
   apt: 
-    name: 
+    name:
       - ansible 
       - flatpak
+      - firefox
+      - chromium
+      - firmware-realtek
     state: present
+- name: remove bloat
+  apt:
+    name: firefox-esr
+    state: absent
