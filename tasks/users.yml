@@ -10,9 +10,3 @@
     owner: root 
     group: root 
     mode: '0440'
-
-- name: ensure lambda user is present
-  user:
-    name: e2c
-    state: present
-    groups: admin
