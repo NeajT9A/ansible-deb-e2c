@@ -9,8 +9,16 @@
   command:
     cmd: flatpak install flathub org.gnome.Podcasts --assumeyes
     creates: /var/lib/flatpak/app/org.gnome.Podcasts
+- name: ensure-zoom-config-exists
+  lineinfile:
+    path: /home/e2c/.var/app/us.zoom.Zoom/config/zoomus.conf
+    line: [General]
+    state: present
+    create: yes
 - name: set-zoom-locale-to-fr
   lineinfile:
     path: /home/e2c/.var/app/us.zoom.Zoom/config/zoomus.conf
     regexp: '^language='
     line: language=fr
+    insertafter: '\[General\]'
+    state: present
